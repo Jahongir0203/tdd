@@ -100,7 +100,6 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
             },
           );
         } catch (e) {
-          print(e);
           emit(NumberTriviaFailureState(message: e.toString()));
         }
       },

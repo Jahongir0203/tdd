@@ -56,7 +56,7 @@ class NumberTriviaPage extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 60,
-                child: TextField(
+                child: TextFormField(
                   controller: bloc.textEditingController,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -103,6 +103,7 @@ class NumberTriviaPage extends StatelessWidget {
                         GetConcreteNumberTriviaEvent(
                             numberString: bloc.textEditingController.text),
                       );
+                      bloc.textEditingController.clear();
                     }
                   }),
                   const SizedBox(

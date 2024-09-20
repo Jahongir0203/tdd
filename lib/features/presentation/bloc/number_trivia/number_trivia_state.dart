@@ -31,3 +31,5 @@ class NumberTriviaFailureState extends NumberTriviaState {
   @override
   List<Object?> get props => [message];
 }
+
+
