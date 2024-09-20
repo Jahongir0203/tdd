@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tdd/features/presentation/bloc/number_trivia/number_trivia_bloc.dart';
 
 import '../../../injection_container.dart';
-import '../../domain/entities/number_trivia.dart';
 import '../widgets/widgets.dart';
 
 class NumberTriviaPage extends StatelessWidget {

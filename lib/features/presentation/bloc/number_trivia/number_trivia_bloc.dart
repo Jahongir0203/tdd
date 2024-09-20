@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tdd/core/usecases/usecases.dart';
@@ -29,9 +28,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     required GetConcreteNumberTrivia concrete,
     required GetRandomNumberTrivia random,
     required this.inputConverter,
-  })  : assert(concrete != null),
-        assert(random != null),
-        super(NumberTriviaInitialState()) {
+  })  : super(NumberTriviaInitialState()) {
     getRandomNumberTrivia = random;
     getConcreteNumberTrivia = concrete;
 
@@ -42,7 +39,7 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     on<GetConcreteNumberTriviaEvent>(
       (event, emit) async {
         final inputEither =
-            await inputConverter.stringToInt(event.numberString);
+        inputConverter.stringToInt(event.numberString);
         await inputEither.fold(
           (failure) {
             emit(
